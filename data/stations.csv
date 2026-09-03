@@ -1,0 +1,15 @@
+station,head,address,address_zip,lat,lon,color,coord_source
+BKD01,Lois Qiao,"2622 Fairhaven Dr, Bakersfield, CA 93309",93309,35.33576,-119.064969,#6E7FDB,address_zip
+CNO01,Joseph Yao,"15097 Van Vliet Ave, Chino, CA 91710",91710,34.01065,-117.692698,#A3D65C,address_zip
+FAT01,Lois Qiao,"5741ECentral Ave, Fresno, CA 93725",93725,36.603548,-119.752047,#46C99A,address_zip
+LAX01,Tianming Yan,"17055 Gale Ave, City of Industry, CA 91745",91745,34.004779,-117.974049,#2DD9C6,address_zip
+LAX02,Tyler Pan,"6303 Corsair St. Commerce, CA 90040",90040,33.994152,-118.145154,#F2A93B,address_zip
+LAX03,Jason Jin,"7412 Anaconda Avenue, Garden Grove, CA 92841",92841,33.787973,-117.971427,#FF6B6B,address_zip
+PLM01,Lois Qiao,"73230 Varner Rd, Thousand Palms, CA 92276",92276,33.81002,-116.354911,#5FD1F0,address_zip
+SAN01,Alex Lin,"8090 Arjons Dr, San Diego, CA 92126",92126,32.904333,-117.143232,#FF8FC7,address_zip
+SFV01,Ziming Pan,"13546 Desmond Street, Pacoima, CA 91331",91331,34.257429,-118.420412,#8B7FF0,address_zip
+SFV02,Selah Wang,"45406 Trevor Ave, Lancaster, CA, 93534",93534,34.726025,-118.153472,#4FB6FF,address_zip
+SMX01,Lois Qiao,"1120 W Cook St, Santa Maria, CA 93458",93458,34.949107,-120.471818,#E8734A,address_zip
+VTC01,Lois Qiao,"610 W Hueneme Rd, Oxnard, CA 93033",93033,34.144059,-119.121882,#E0C341,address_zip
+YUM01,Lois Qiao,"325 W Olive Ave, El Centro, CA 92243",92243,32.767366,-115.61263,#7FA5C9,address_zip
+YUM02,Lois Qiao,"2775 E Palo Verde St Yuma, AZ 85365",85365,32.991365,-114.228362,#C87FEA,address_zip
