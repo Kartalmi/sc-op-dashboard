@@ -87,7 +87,7 @@ then open `http://localhost:8000/`.
 **数据更新时间 · last data update: 2026-09-04**
 **单量口径 · volume basis: 2026-08 领件量日均（31 天）**
 
-14 stations · 28 DSPs · 196 routes · 862 ZIP rows · 240,859 pkg/day
+14 stations · 27 DSPs · 196 routes · 862 ZIP rows · 240,859 pkg/day
 LAX01 · LAX02 · LAX03 · SFV01 · SFV02 · CNO01 · SAN01 · BKD01 · VTC01 · FAT01 · SMX01 · YUM01 · YUM02 · PLM01
 
 These figures are a snapshot of the CSVs — the site itself computes them at load time, so the
