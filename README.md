@@ -6,7 +6,7 @@
 
 ```
 data/stations.csv              站点 — one row per station (14 rows)
-data/assignments.csv           报价 + 线路归属 + 单量 — one row per station+ZIP+route (865 rows)
+data/assignments.csv           报价 + 线路归属 + 单量 — one row per station+ZIP+route (862 rows)
 
 index.html                     Network map (main page)
 analytics/dsp-pricing.html     DSP pricing — avg price by station (linked from map sidebar)
@@ -36,9 +36,8 @@ How the derived numbers work:
 - **ZIP price** = volume-weighted mean of that ZIP's rows. A ZIP on one route is just that row's price.
 - **Route price** = volume-weighted mean over the route's ZIPs.
 - **Station avg / DSP avg** = volume-weighted over priced ZIPs.
-- A ZIP served by two stations (90041 / 90042 / 90050) is simply two rows with different `station`.
-- A ZIP split across two routes (91766 on CNO-041 / CNO-042) is two rows — and they may carry
-  **different prices**; the ZIP price then averages them by volume.
+- A ZIP served by two stations, or split across two routes, is simply two rows — and they may carry
+  different prices; the ZIP price then averages them by volume. Every ZIP is currently on one row.
 
 Common edits:
 
@@ -85,8 +84,14 @@ then open `http://localhost:8000/`.
 
 ## Coverage
 
-14 stations · 28 DSPs · 196 routes · 862 ZIP rows · 264,639 pkg/day
+**数据更新时间 · last data update: 2026-09-04**
+
+14 stations · 28 DSPs · 196 routes · 862 ZIP rows · 262,061 pkg/day
 LAX01 · LAX02 · LAX03 · SFV01 · SFV02 · CNO01 · SAN01 · BKD01 · VTC01 · FAT01 · SMX01 · YUM01 · YUM02 · PLM01
+
+These figures are a snapshot of the CSVs — the site itself computes them at load time, so the
+sidebar and page footers are always current even when this section is not. Update the date above
+whenever you commit a data change.
 
 ## Deploy
 
@@ -97,10 +102,7 @@ Live: https://kartalmi.github.io/sc-op-dashboard/
 ## Known data gaps
 
 - **172 ZIP rows** are PO-Box / point ZIPs with no US Census ZCTA polygon, so they are unshaded on
-  the map (2.58% of volume). They still count in every total and are findable via ZIP search.
-
-Closed in the 2026-09-04 roster update: SAN01 now carries real daily volume (was all zeros), and
-ZIP 91766 moved to LAX01 as a single route instead of being split across CNO-041 / CNO-042.
+  the map (2.60% of volume). They still count in every total and are findable via ZIP search.
 
 ## Adding future analytics subpages
 

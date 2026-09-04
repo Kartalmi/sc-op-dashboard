@@ -292,7 +292,6 @@
   }
 
   global.GofoData = {
-    parseCsv: parseCsv,
     load: function (base, geo) {
       base = base || '';
       return Promise.all([
