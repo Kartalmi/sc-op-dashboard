@@ -85,7 +85,7 @@ then open `http://localhost:8000/`.
 
 ## Coverage
 
-14 stations · 29 DSPs · 195 routes · 864 ZIP rows · 238,819 pkg/day
+14 stations · 28 DSPs · 196 routes · 862 ZIP rows · 264,639 pkg/day
 LAX01 · LAX02 · LAX03 · SFV01 · SFV02 · CNO01 · SAN01 · BKD01 · VTC01 · FAT01 · SMX01 · YUM01 · YUM02 · PLM01
 
 ## Deploy
@@ -96,14 +96,11 @@ Live: https://kartalmi.github.io/sc-op-dashboard/
 
 ## Known data gaps
 
-- **SAN01** — no daily volume in the source roster (138 ZIP rows, all zero). Pricing and coverage
-  are valid; volume shows as no-data.
-- **ZIP 91766 (CNO01)** — carried on routes CNO-041 and CNO-042 at 710/day each, summed to
-  1,420/day and priced at a flat 1.625. The source roster lists the two routes at $1.55 and $1.70;
-  to reflect that, set those two prices on the two rows in `assignments.csv` — the ZIP price stays
-  1.625 and the two routes then price separately.
 - **172 ZIP rows** are PO-Box / point ZIPs with no US Census ZCTA polygon, so they are unshaded on
-  the map (2.55% of volume). They still count in every total and are findable via ZIP search.
+  the map (2.58% of volume). They still count in every total and are findable via ZIP search.
+
+Closed in the 2026-09-04 roster update: SAN01 now carries real daily volume (was all zeros), and
+ZIP 91766 moved to LAX01 as a single route instead of being split across CNO-041 / CNO-042.
 
 ## Adding future analytics subpages
 
