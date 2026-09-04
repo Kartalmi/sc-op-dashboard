@@ -101,8 +101,15 @@ Live: https://kartalmi.github.io/sc-op-dashboard/
 
 ## Known data gaps
 
-- **172 ZIP rows** are PO-Box / point ZIPs with no US Census ZCTA polygon, so they are unshaded on
-  the map (2.60% of volume). They still count in every total and are findable via ZIP search.
+- **159 ZIP rows** are PO-Box / point ZIPs with no US Census ZCTA polygon at all, so they are
+  unshaded on the map (2.21% of volume). They still count in every total and are findable via
+  ZIP search.
+
+The polygons in `index.html` cover the ZIPs known at build time. A ZIP added to `assignments.csv`
+later has no boundary and stays unshaded even when a real ZCTA exists — check the map after adding
+one. To add a boundary, pull it from the Census TIGERweb ZCTA layer and append a feature to the
+`zipgeo` block with `properties: {zip, lat, lon}`, using the layer's `INTPTLAT` / `INTPTLON` as
+`lat` / `lon`.
 
 ## Adding future analytics subpages
 
